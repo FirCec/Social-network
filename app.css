@@ -1,0 +1,300 @@
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: #f1f1f1;
+    font-size: 14px;
+    font-family: "Roboto",sans-serif;
+    line-height: 1.3;
+    margin: 0;
+}
+body p{
+    color: rgba(000, 000, 000, 0.67); 
+}
+a{
+    color: inherit;
+    
+}
+.topbar a{
+    text-decoration: none;
+}
+.topbar{
+    background: #2C3e50;
+    color: #fff;
+}
+.topbar-logo{
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 24px;
+
+}
+.topbar-nav{
+    padding-bottom: 16px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+.topbar-nav a:hover,
+.topbar-nav .active {
+    color: #fff; 
+}
+.topbar-nav a{
+    display: inline-block;
+    margin: 0 12px;  
+    color: rgba(255, 255, 255, 0.67);  
+    transition: color 0.5s;
+}
+/*systeme standards a retenir*/
+.container{
+    padding: 0 15px;
+    max-width: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.site{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sidebar{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+.sidebar a{
+    display: block;
+    width: 50%;
+    padding: 0.6em 0;
+    text-decoration: none;
+    transition: 0.4s;
+    border: solid 1px transparent;
+    padding-left: 10px;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+    color: #000;
+    border: solid 1px #dbdbdb;
+    background-color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.sidebar a:hover::before,.sidebar a.active::before{
+    opacity: 1;
+}
+/*Ajout des icons, standard*/
+.sidebar a::before{
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-image: url("icon/home\ 1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 15px;
+    opacity: .67;
+    transition: opacity .3s;
+
+}
+.sidebar a.sidebar-message::before{
+    background-image: url(icon/message\ 1.svg);
+}
+.sidebar a.sidebar-evenement::before{
+    background-image: url(icon/calendar\ 1.svg);
+    
+}
+.sidebar a.sidebar-group::before,.sidebar a.sidebar-amis::before{
+    background-image: url(icon/multiple-users-silhouette\ 1.svg);
+}
+.card{
+    border: solid 1px #dbdbdb;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+.card-header{
+    padding: 15px;
+    position: relative;
+}
+.card-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-time{
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(000, 000,000, 0.38);
+}
+/*Systeme standard pour centrer les elements comme les images ou icons*/
+.card-avatar{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.card-header-avatar{
+    padding-left: 65px ;
+}
+.card-body p:first-child{
+    margin-top: 0;
+}
+.card-body p:last-child{
+    margin-bottom: 0;
+}
+.card-body {
+    padding: 0 10px 20px 10px;
+}
+/*coller les images*/
+.card-body .fullimg{
+    display: block;
+    width: calc(100% + 20px);/*important*/
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.card-body img{
+    width: 100%;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #fbfbfb;
+    border-top: solid 1px #dbdbdb;
+    color: #dbdbdb;
+    font-size: 12px;
+}
+.card-footer a{
+    text-decoration: none;
+    color: rgba(000, 000,000, 0.38);
+    transition: 0.4s;
+    
+}
+.card-footer a:hover{
+    text-decoration: underline;
+    color: rgba(000, 000,000, 1);
+}
+.card-footer a::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("icon/like.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-right: 5px;
+    opacity: .67;
+}
+.card-footer .card-comment::before{
+    background-image: url(icon/message.svg);
+}
+.sidebar-title,.friend-name{
+    font-size: 16px;
+    font-weight: bold;
+}
+.sidebar-title::after{
+    content: "";
+    display: block;
+    height: 1.5px;
+    background-color: #000;
+    width: 100%;
+    margin-top: 2px;
+}
+.friend{
+    position: relative;
+    padding: 8px 8px 8px 88px;
+}
+.friend a{
+    text-decoration: none;
+    transition: 0.4s;
+}
+.friend a:hover{
+    text-decoration: underline;
+}
+.friend-avatar{
+    position: absolute;
+    top: 50%;
+    left: 0;   
+    transform: translateY(-50%);
+}
+.friend-add::before{
+    content: "";
+    display: inline-block;
+    background-image: url(icon/add-friend.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -4px;
+}
+.friend-add{
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+}
+.friend-connection{
+    padding-top: 5px;
+    font-weight: 500;
+    color: rgba(000, 000,000, 0.38);
+}
+
+
+
+@media only screen and (min-width:519px) {
+    .topbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        padding: 0 20px;
+    }
+    .topbar-nav,
+    .topbar-logo {
+        padding: 0;
+    }
+    .topbar-nav a{
+        margin: 0 20px;
+    }
+    .aside .card{
+        display: none;
+    }
+  
+}
+@media only screen and (min-width: 950px) {
+    .site{
+        display: flex;
+    }
+    .main{
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    
+    }
+    .sidebar{
+        display: block;
+        flex: none; /*afin que la largeur soit vraiment 180px*/
+        width: 180px;
+    }
+    .sidebar a{
+        
+        width: 100%;
+    }
+   
+    .aside{
+        flex: none; /*afin que la largeur soit vraiment 310px*/
+        width: 310px;
+    }
+    
+}
